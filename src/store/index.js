@@ -10,8 +10,9 @@ const initialState = {
 
 const storeReducer = (state = initialState, action) => {
   if (action.type === "ADD") {
+    let updatedarray = [...state.repository,action.info]
     return {
-      repository: state.repository.push(action.info),
+      repository: updatedarray,
     };
 
   }
