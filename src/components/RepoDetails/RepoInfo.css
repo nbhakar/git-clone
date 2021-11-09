@@ -1,0 +1,35 @@
+.delBtnBox{
+    text-align: end;
+    padding: 15px;
+}
+
+.delBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(83, 83, 83);
+    font-size: 15px;
+}
+.delBtn:hover{
+    color: black;
+}
+.repoDetail{
+    margin: 7px ;
+    border: 1.5px solid black;
+    height: 85%;
+    overflow: scroll;
+}
+.detailBtn{
+    border: none;
+    margin: 0;
+    padding: 9px 28px;
+    background-color: transparent;
+    border-right: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    transform: translateY(-2%);
+    cursor: pointer;
+    color: rgb(83, 83, 83);
+}
+.detailBtn:hover{
+    color: black;
+}

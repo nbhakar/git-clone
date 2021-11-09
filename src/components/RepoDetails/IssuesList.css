@@ -1,0 +1,12 @@
+.issueBox {
+  padding: 20px;
+  border-bottom: 1.5px solid black;
+  border-top: 1.5px solid black;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  transform: translateY(-3%);
+}
+.issueName {
+  cursor: pointer;
+}

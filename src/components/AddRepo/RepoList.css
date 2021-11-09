@@ -1,0 +1,15 @@
+.repoList{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px 2px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+.repoList:hover{
+    background-color: rgb(221, 221, 221);
+}
+.repoHeading{
+    font-weight: bold;
+    font-size: large;
+}

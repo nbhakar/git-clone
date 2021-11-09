@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AddRepo from './components/AddRepo/AddRepo';
+import Repo from './components/AddRepo/Repo';
+import RepoInfo from './components/RepoDetails/RepoInfo';
 
 function App() {
+  const [addRepo, setAddRepo] = useState(false);
+  const [userInfo, setUserInfo] = useState();
+
+  const addRepoHandler = () => {
+    setAddRepo(true);
+  }
+  const closeAddRepoHandler = () => {
+    setAddRepo(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="box">
+      <div className="header">Github</div>
+      <div className="leftPanel">
+        <Repo setUserInfo={setUserInfo}  />
+      <button className="addBtn" onClick={addRepoHandler}>+</button>
+      </div>
+      <div className="rightPanel">
+        {userInfo && <RepoInfo userInfo={userInfo}/>}
+      </div>
+      {addRepo && <AddRepo onClose={closeAddRepoHandler} />}
     </div>
   );
 }
